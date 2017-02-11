@@ -1,5 +1,6 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
+var routes = require('./config/routes')
 
 
 /**
@@ -29,7 +30,7 @@ var USER_DATA = {
 // });
 
 var Link = React.createClass({
-  
+
   changeURL: function () {
     window.location.replace(this.props.href)
   },
@@ -84,6 +85,6 @@ var Avatar = React.createClass({
   }
 })
 
-ReactDOM.render(<Avatar user={USER_DATA} />, document.getElementById('app'));
+ReactDOM.render(routes, document.getElementById('app'));
 
 // ReactDOM.render(<HelloUser name="Bill"/>, document.getElementById('app'));
